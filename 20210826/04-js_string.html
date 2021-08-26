@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    // 자바스크립트도 문자열을 다룰 수 있습니다.
+    // 그래서 문자열을 다루거나 문자열을 생성하기 위해
+    // String이라는 객체를 만들어 사용합니다.
+
+    // 보편적인 생성법
+    var str1 = new String("자바스크립트");
+
+    // 간소화된 생성법
+    var str2 = "자바스크립트"; //혹은 '자바스크립트'
+
+    //실제 활용.
+    var text = "javascript is good";
+    document.write(text.bold() + "<br/>");
+    document.write(text.link("https://naver.com") + "<br/>");
+    document.write(text.length + "<br/>");
+    document.write(text.toLocaleLowerCase() + "<br/>");
+    document.write(text.toUpperCase() + "<br/>");
+    document.write(text.indexOf("i") + "<br/>");
+    document.write(text.lastIndexOf("i") + "<br/>");
+    document.write(text.charAt(5) + "<br/>");
+    document.write(text.substring(4, 6) + "<br/>");
+    document.write(text.substr(10, 3) + "<br/>");
+    document.write(text.replace("good", "great") + "<br/>");
+    document.write(text.concat("...") + "<br/>");
+    document.write(text.split(" ") + "<br/>");
+
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>

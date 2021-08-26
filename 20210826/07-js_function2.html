@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    // 자바스크립트 내에서 특정 요소를 얻어오기
+    // document.getElementBy~~~~
+    // ex) id가 qwer인 요소 가져오기
+    //     document.getElementById("qwer");
+    //console.log(document.getElementById("qwer"));
+    
+    //var qwer = document.getElementsByName("qwer");
+
+    //console.log(qwer);
+    var num = 0; //그림 번호
+
+    function nextPic() {
+        num++; //다음 번호로 이동
+
+        if(num >= 3) {
+            num = 0;
+        }
+
+        document.getElementById("pic").src="images/img" + num + ".jpg";
+        //id가 pic인 요소(그림)의 src속성을
+        //1증가된 num을 이용해 바꿔줌
+        //document.getElementById("pic").width = "300";
+
+         return false;
+        // 그림 변경 후 링크 이동을 막기 위해 사용
+    }
+
+    function prevPic() {
+        num--;
+
+        if(num <= -1) {
+            num = 2;
+        }
+
+        document.getElementById("pic").src="images/img" + num + ".jpg";
+
+        return false;
+    }
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <h1>이미지 넘기기</h1>
+    <a href="#" onclick="return prevPic()">이전</a>
+
+    <img width="500px" height="300px" src="images/img0.jpg" id="pic" />
+
+    <a href="#" onclick="return nextPic()">다음</a>
+    <!-- <img name="qwer" src="images/img0.jpg" /> -->
+</body>
+</html>
