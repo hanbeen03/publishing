@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    // 원거리 선택자.
+    // 태그에 지정한 id를 이용해 특정 태그만 선택할 수 있는
+    // 선택자입니다.
+    // 선택대상.getElementById("아이디명");
+
+    //문서 로딩이 끝난 다음에 호출하도록
+    //window.onload 내부에 작성하겠습니다.
+    window.onload = function() {
+        //여기에 작성해야 정상실행
+        var myObj = document.getElementById("title");
+        console.log(myObj);
+        // #title 요소를 가져와 글씨색 파란색으로 변경
+        myObj.style.color = "blue";
+        console.log(myObj);
+
+        // 특정 태그들을 들고오기
+        // 선택대상.getElementsByTagName("태그명");
+        var myList = document.getElementsByTagName("ul");
+        //2. ul > li인 요소들 선택
+        console.log(myList);
+        var myObjs = myList[0].getElementsByTagName("li")[1];
+        console.log(myObjs);
+        // ul > li 를 지정한 것과 같은 효과
+        myLi = myList[0].getElementsByTagName("li");
+        console.log(myLi);
+        myLi[0].style.border = "solid 1px #fa0";
+        myLi[1].style.border = "solid 1px #0f0";
+
+        var myTest = document.getElementById("list");
+        console.log(myTest);
+        var myTest2 = myTest.getElementsByTagName("li");
+        console.log(myTest2);
+
+        for(var i = 0; i < myTest2.length; i++) {
+            if( i % 2 === 1) {
+                myTest2[i].style.border="1px solid green";
+            } else {
+                myTest2[i].style.border="1px solid yellow";
+            }
+            //myTest2[i].style.background = "#ff" + i;
+        }
+    }
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <div>
+        <h1>선택자</h1>
+        <h2 id="title">원거리 선택자</h2>
+        <ul>
+            <li>getElementById</li>
+            <li>getElementByTagName</li>
+        </ul>
+        <h2>근거리 선택자</h2>
+        <ul id="list">
+            <li>parentNode</li>
+            <li>childNodes</li>
+            <li>children</li>
+            <li>firstChild</li>
+            <li>previousSibling</li>
+            <li>nextSibling</li>
+        </ul>
+    </div>
+</body>
+</html>
