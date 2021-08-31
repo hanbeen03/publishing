@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+
+    window.onload = function () {
+
+        var h1Button = document.getElementById("createh1");
+        var divTag = document.getElementById("h1space");
+
+        h1Button.onclick = function () {
+            var h1Tag = document.createElement("h1");
+            var text = document.createTextNode("아무거나");
+
+            h1Tag.appendChild(text);
+
+            divTag.appendChild(h1Tag);
+        }
+
+    }
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <div id="h1space">
+
+    </div>
+    <button id="createh1">h1생성</button>
+</body>
+</html>
