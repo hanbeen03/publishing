@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    .menudiv {
+        text-align:center;
+    }
+    #menubar {
+        display: none;
+    }
+    ul {
+        list-style-type: none;
+    }
+</style>
+<script>
+$(() => {
+    
+    $(".menudiv").mouseenter(function () {
+        $("#menubar").css("display", "block");
+    });
+
+    $(".menudiv").mouseleave(function () {
+        $("#menubar").css("display", "none");
+    });
+});
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <div class="menudiv">
+        <h2>메뉴</h2>
+        <ul id="menubar">
+            <li>피자 : 20000원</li>
+            <li>치킨 : 25000원</li>
+            <li>탕수육 : 30000원</li>
+            <li>깐풍기 : 35000원</li>
+            <li>짜장면 : 6000원</li>
+        </ul>
+    </div>
+</body>
+</html>
