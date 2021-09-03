@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    Person.prototype.setName = function(name) {
+        this.name = name;
+    }
+
+    Person.prototype.getName = function() {
+        return this.name;
+    }
+
+    Person.prototype.setAge = function(age) {
+        this.age = age;
+    }
+
+    Person.prototype.getAge = function() {
+        return this.age;
+    }
+
+    function Student(major) {
+        this.major = major;
+    }
+
+    function BusinessMan(salary) {
+        this.salary = salary;
+    }
+
+    var person1 = new Person("홍길동", 24);
+    Student.prototype = person1;
+
+    Student.prototype.showInfo = function() {
+        console.log(this.name, this.age, this.major);
+    }
+
+    var person2 = new Person("김길동", 30);
+    BusinessMan.prototype = person2;
+
+    BusinessMan.prototype.showInfo = function () {
+        console.log(this.name, this.age, this.salary);
+    }
+
+    var student = new Student("Computer Science");
+    student.showInfo();
+
+    var businessMan = new BusinessMan("3000");
+    businessMan.showInfo();
+
+    console.log(student.getName());
+    console.log(student.getAge());
+    console.log(businessMan.getName());
+    console.log(businessMan.getAge());
+
+    student.setName("테스트S");
+    businessMan.setName("테스트B");
+
+    console.log(student.getName());
+    console.log(student.getAge());
+    console.log(businessMan.getName());
+    console.log(businessMan.getAge());
+    
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>
